@@ -2,12 +2,11 @@
 @section('content')
   <!-- Page Content -->
     <!-- Banner Starts Here -->
-    @include('partials.banner')
 
       <!-- Banner Ends Here -->
 
       <section class="single_plan">
-        <div class="container">
+        <div class="container thankyou">
           <div class="row">
             <div class="col-9">
               <div class="mb-5 single_plan-heading">

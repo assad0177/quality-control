@@ -3,6 +3,8 @@
 namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
+use App\Models\Client;
+use App\Models\Subscription;
 use Illuminate\Http\Request;
 
 class ClientController extends Controller
@@ -23,6 +25,10 @@ class ClientController extends Controller
      */
     public function index()
     {
-        return view('client');
+        $i=1;
+        $subscriptions=Subscription::where('client_id',auth()->user()->id)->get();
+        $invoices=Subscription::where('client_id',auth()->user()->id)->withTrashed();
+        $client=Client::where('id',auth()->user()->id)->first();
+        return view('client.index',compact('subscriptions','i','invoices','client'));
     }
 }

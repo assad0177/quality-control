@@ -7,33 +7,22 @@
 			<section id="hero-5" class="bg-scroll hero-section">
 				<div class="hero-overlay division">
 					<div class="container white-color">
-
-
 						<!-- Hero Content -->
 						<div class="row hero-row-180">
 							<div class="col-sm-9 col-md-8 hero-txt">
-
 								<!-- Title -->
 								<h2 class="h2-hero-huge">Quality Assurance Gauranteed</h2>
-
 								<!-- Text -->
 								<p class="p-hero-medium">Varius feugiat rabitur nulla arcu sodales sapien lacus sed cursus amet cursus porta,
 								   egestas luctus feugiat egestas ultrices luctus
 								</p>
-
 								<!-- Button -->
 								<a href="#" class="btn btn-lg tra-hover m-top-20">Learn More <i class="fa fa-angle-double-right" aria-hidden="true"></i></a>
-
 							</div>
 						</div>
-
-
 					</div> 	  <!-- End container -->
 				</div>	   <!-- End Hero overlay -->
 			</section>	<!-- END HERO-5 -->
-
-
-
 
 			<!-- ABOUT-2
 			============================================= -->
@@ -114,9 +103,6 @@
 				</div>	   <!-- End container -->
 			</section>	<!-- END ABOUT-2 -->
 
-
-
-
 			<!-- CONTENT-1
 			============================================= -->
 			<section id="content-1" class="bg-lightgrey wide-50 content-section division">
@@ -158,9 +144,6 @@
 
 				</div>	   <!-- End container -->
 			</section>	<!-- END CONTENT-1 -->
-
-
-
 
 			<!-- TESTIMONIALS-2
 			============================================= -->
@@ -258,9 +241,6 @@
 					</div>	   <!-- End row -->
 				</div>	     <!-- End container -->
 			</section>	  <!-- END TESTIMONIALS-2 -->
-
-
-
 
 			<!-- PORTFOLIO-1
 			============================================= -->
@@ -463,9 +443,6 @@
 				</div>	   <!-- End container -->
 			</section>	<!-- END PORTFOLIO-1 -->
 
-
-
-
 			<!-- CLIENTS-1
 			============================================= -->
 			<section id="clients-1" class="bg-lightgrey clients-section wide-50 division">
@@ -544,9 +521,6 @@
 
 				</div>	   <!-- End container -->
 			</section>	<!-- END CLIENTS-1 -->
-
-
-
 
 			<!-- TEAM-1
 			============================================= -->
@@ -785,9 +759,6 @@
 				</div>	   <!-- End container -->
 			</section>	<!-- END TEAM-1 -->
 
-
-
-
 			<!-- CONTENT-5
 			============================================= -->
 			<section id="content-5" class="wide-50 content-section division">
@@ -856,9 +827,6 @@
 				</div>	   <!-- End container -->
 			</section>	<!-- END CONTENT-5 -->
 
-
-
-
 			<!-- STATISTIC-1
 			============================================= -->
 			<section id="statistic-1" class="bg-scroll bg-theme p-top-80 p-bottom-30 statistic-section division">
@@ -905,7 +873,6 @@
 					</div>	  <!-- End row -->
 				</div>	   <!-- End container -->
 			</section>	<!-- END STATISTIC-1 -->
-
 
         <!-- PRICING-1
         ============================================= -->
@@ -1024,9 +991,6 @@
 
             </div>    <!-- End container -->
         </section>	<!-- END PRICING-1 -->
-
-
-
 
 			<!-- FEATURES-2
 			============================================= -->
@@ -1158,9 +1122,6 @@
 				</div>	   <!-- End container -->
 			</section>	<!-- END FEATURES-2 -->
 
-
-
-
 			<!-- BANNER-4
 			============================================= -->
 			<section id="banner-4" class="bg-scroll banner-section division">
@@ -1185,9 +1146,6 @@
 					</div>	  <!-- End row -->
 				</div>	   <!-- End container -->
 			</section>	<!-- END BANNER-4 -->
-
-
-
 
 			<!-- CONTENT-2
 			============================================= -->
@@ -1228,9 +1186,6 @@
 					</div>	  <!-- End row -->
 				</div>	   <!-- End container -->
 			</section>	<!-- END CONTENT-2 -->
-
-
-
 
 			<!-- BLOG-1
 			============================================= -->
@@ -1381,9 +1336,6 @@
 
 				</div>		<!-- End container -->
 			</section>	<!-- END BLOG-1 -->
-
-
-
 
 			<!-- CONTACTS-4
 			============================================= -->

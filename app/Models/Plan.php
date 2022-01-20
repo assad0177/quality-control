@@ -20,5 +20,13 @@ class Plan extends Model
         return $this->test->pluck('id')->toArray();
     }
 
+    public function subscription()
+    {
+        return $this->hasMany(Subscription::class);
+    }
+    public function terminal()
+    {
+        return $this->hasMany(Terminal::class);
+    }
 
 }

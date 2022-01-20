@@ -9,4 +9,14 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 class Subscription extends Model
 {
     use HasFactory,SoftDeletes;
+
+    public function plan()
+    {
+        return $this->belongsTo(Plan::class);
+    }
+
+    public function terminal()
+    {
+        return $this->belongsTo(Terminal::class);
+    }
 }

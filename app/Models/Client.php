@@ -16,4 +16,10 @@ class Client extends Authenticatable
     ];
     protected $guarded = [];
 
+    public function terminal()
+    {
+        return $this->hasMany(Terminal::class);
+    }
+
+
 }

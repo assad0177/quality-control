@@ -28,4 +28,21 @@ class Terminal extends Authenticatable
     protected $hidden = [
         'password', 'remember_token',
     ];
+
+    public function subscription()
+    {
+        return $this->hasOne(Subscription::class);
+    }
+
+    public function client()
+    {
+       return $this->belongsTo(Client::class);
+    }
+
+    public function plan()
+    {
+        return $this->belongsTo(Plan::class);
+    }
+
+
 }

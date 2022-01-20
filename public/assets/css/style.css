@@ -130,7 +130,7 @@ body {
 .m-bottom-80 { margin-bottom: 80px; }
 .m-bottom-70 { margin-bottom: 70px; }
 .m-bottom-60 { margin-bottom: 60px; }
-.m-bottom-50 { margin-bottom: 50px; }
+.m-bottom-50 { margin-bottom: 20px; }
 .m-bottom-40 { margin-bottom: 40px; }
 .m-bottom-35 { margin-bottom: 35px; }
 .m-bottom-30 { margin-bottom: 30px; }
@@ -176,13 +176,13 @@ body {
 
 .p-top-100 { padding-top: 100px; }
 .p-top-90 { padding-top: 90px; }
-.p-top-80 { padding-top: 80px; }
+.p-top-80 { padding-top: 49px; }
 .p-top-70 { padding-top: 70px; }
 .p-top-60 { padding-top: 60px; }
 .p-top-50 { padding-top: 50px; }
 .p-top-40 { padding-top: 40px; }
 .p-top-30 { padding-top: 30px; }
-.p-top-25 { padding-top: 25px; }
+.p-top-25 { padding-top: 12px; }
 .p-top-20 { padding-top: 20px; }
 .p-top-15 { padding-top: 15px; }
 .p-top-10 { padding-top: 10px; }
@@ -198,8 +198,8 @@ body {
 .p-bottom-60 { padding-bottom: 60px; }
 .p-bottom-50 { padding-bottom: 50px; }
 .p-bottom-40 { padding-bottom: 40px; }
-.p-bottom-30 { padding-bottom: 30px; }
-.p-bottom-25 { padding-bottom: 25px; }
+.p-bottom-30 { padding-bottom: 0px; }
+.p-bottom-25 { padding-bottom: 10px; }
 .p-bottom-20 { padding-bottom: 20px; }
 .p-bottom-15 { padding-bottom: 15px; }
 .p-bottom-10 { padding-bottom: 10px; }
@@ -283,6 +283,45 @@ body {
 /*------------------------------------------*/
 /*	HEADERS
 /*------------------------------------------*/
+.thankyou{
+    height:263px;
+    width:100%;
+    padding-top: 70px;
+}
+.card {
+    margin-bottom: 1.5rem
+}
+
+.card {
+    position: relative;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: #fff;
+    background-clip: border-box;
+    border: 1px solid #c8ced3;
+    border-radius: .25rem
+}
+
+.card-header:first-child {
+    border-radius: calc(0.25rem - 1px) calc(0.25rem - 1px) 0 0
+}
+
+.card-header {
+    padding: .75rem 1.25rem;
+    margin-bottom: 0;
+    background-color: #f0f3f5;
+    border-bottom: 1px solid #c8ced3
+}
+
+.scrollY{
+
+    overflow-y:scroll;
+    height: 10px;
+}
 .register_section{
     padding-top: 40px;
     padding-bottom: 40px;
@@ -1263,9 +1302,12 @@ hr {
 	height: 100%;
 	background-color: rgba(250, 250, 250, 0.7);
 }
-
 #hero-5 .hero-overlay {
 	height: 100%;
+	background-color: rgba(71, 21, 79, 0.9);
+}
+#hero-5 .banner{
+	height: 210px;
 	background-color: rgba(71, 21, 79, 0.9);
 }
 
@@ -1421,7 +1463,12 @@ h2.h2-hero-lg {
 	font-weight: 600;
 	margin-bottom: 20px;
 }
-
+.acknowledge-text{
+	font-size: 35px !important;
+	line-height: 95px ;
+	font-weight: 500;
+	margin-bottom: 8px !important;
+}
 h2.h2-hero-huge {
 	font-size: 85px;
 	line-height: 95px;

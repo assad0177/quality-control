@@ -48,6 +48,7 @@ class TestController extends Controller
 
         if( $request->hasFile('image') && $request->hasFile('icon') )
         {
+
             $icon="assets/images/".$request->icon->getClientOriginalName();
             $image="assets/images/".$request->image->getClientOriginalName();
             $test=new Test();
