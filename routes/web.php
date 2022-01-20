@@ -43,6 +43,7 @@ Route::prefix('client')->group(function() {
     Route::post('/login', [\App\Http\Controllers\Auth\ClientLoginController::class, 'login'])->name('client.login.submit');
     Route::get('logout/', [\App\Http\Controllers\Auth\ClientLoginController::class, 'logout'])->name('client.logout');
     Route::get('/', [\App\Http\Controllers\Auth\ClientController::class, 'index'])->name('client.dashboard');
+
 }) ;
 
 Route::prefix('terminal')->group(function() {
@@ -65,3 +66,9 @@ Route::get('/send-mail', [\App\Http\Controllers\MailController::class, 'sendEmai
 
 
 Route::get('/get-plan-price', [\App\Http\Controllers\PageNavigationController::class, 'getPlanPrice'])->name('getPlanPrice');
+
+
+Route::get('/job-report/{id}', [\App\Http\Controllers\Auth\ClientController::class, 'jobReport'])->name('job.report');
+Route::get('/jobs', [\App\Http\Controllers\Auth\ClientController::class, 'jobs']);
+Route::get('/generate-pdf', [\App\Http\Controllers\Auth\ClientController::class, 'generatePdf'])->name('generatePdf');
+

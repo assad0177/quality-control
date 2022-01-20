@@ -6,7 +6,16 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
-class Jobs extends Model
+class Job extends Model
 {
     use HasFactory,SoftDeletes;
+
+    public function terminal()
+    {
+        return $this->belongsTo(Terminal::class);
+    }
+    public function client()
+    {
+        return $this->belongsTo(Client::class);
+    }
 }

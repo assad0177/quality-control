@@ -44,5 +44,9 @@ class Terminal extends Authenticatable
         return $this->belongsTo(Plan::class);
     }
 
+    public function job()
+    {
+        return $this->hasOne(Job::class);
+    }
 
 }
