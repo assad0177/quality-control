@@ -43,6 +43,11 @@ Route::prefix('client')->group(function() {
     Route::post('/login', [\App\Http\Controllers\Auth\ClientLoginController::class, 'login'])->name('client.login.submit');
     Route::get('logout/', [\App\Http\Controllers\Auth\ClientLoginController::class, 'logout'])->name('client.logout');
     Route::get('/', [\App\Http\Controllers\Auth\ClientController::class, 'index'])->name('client.dashboard');
+    Route::get('/download-invoice', [\App\Http\Controllers\Auth\ClientController::class, 'downloadInvoice'])->name('downloadInvoice');
+    Route::get('/view-invoice', [\App\Http\Controllers\Auth\ClientController::class, 'viewInvoice'])->name('viewInvoice');
+    Route::get('/invoice', [\App\Http\Controllers\Auth\ClientController::class, 'clientInvoice'])->name('clientInvoice');
+    Route::get('/job', [\App\Http\Controllers\Auth\ClientController::class, 'clientJob'])->name('clientJob');
+    Route::get('/view-report/{id}', [\App\Http\Controllers\Auth\ClientController::class, 'viewReport'])->name('viewReport');
 
 }) ;
 
@@ -62,8 +67,6 @@ Route::post('/pay-and-register', [\App\Http\Controllers\PageNavigationController
 Route::get('/thankyou', [\App\Http\Controllers\PageNavigationController::class, 'thankyou'])->name('thankyou');
 
 Route::get('/send-mail', [\App\Http\Controllers\MailController::class, 'sendEmail'])->name('sendEmail');
-
-
 
 Route::get('/get-plan-price', [\App\Http\Controllers\PageNavigationController::class, 'getPlanPrice'])->name('getPlanPrice');
 

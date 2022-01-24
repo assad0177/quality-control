@@ -1,7 +1,5 @@
 <!-- EXTERNAL SCRIPTS
 		============================================= -->
-        {{-- <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
-        <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script> --}}
 		<script src="{{asset('assets/js/jquery-2.2.4.min.js')}}" type="text/javascript"></script>
 		<script src="{{asset('assets/js/bootstrap.min.js')}}" type="text/javascript"></script>
 		<script src="{{asset('assets/js/modernizr.custom.js')}}" type="text/javascript"></script>
@@ -34,7 +32,6 @@
                   $('#addr'+i).html($('#addr'+b).html()).find('td:first-child').html(i+1);
                   $('#tab_logic').append('<tr  id="addr'+(i+1)+'"></tr>');
                    i++;
-
               });
             $("#delete_row").click(function(){
                 if(i>1){

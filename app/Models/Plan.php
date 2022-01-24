@@ -11,7 +11,6 @@ class Plan extends Model
 
     public function test()
     {
-
         return $this->belongsToMany(Test::class, 'test_plans', 'plan_id' , 'test_id'  );
     }
 
@@ -28,5 +27,9 @@ class Plan extends Model
     {
         return $this->hasMany(Terminal::class);
     }
-
+    public function getAvailableTests()
+    {
+        dd(Plan::with('test')->pluck('id','name')->where('status',0));
+        // dd($this->test->select('id','description')->where('status','1')->toArray());
+    }
 }

@@ -15,12 +15,20 @@
                     <span class="sidebar-icon">
                         <i class="fa fa-bar-chart" aria-hidden="true"></i>
                     </span>
+                    <span class="sidebar-text">{{ __('Dashboard') }}</span>
+                </a>
+            </li>
+            <li class="nav-item bt-1 {{ request()->routeIs('clientJob') ? 'active' : '' }}">
+                <a href="{{ route('clientJob') }}" class="nav-link">
+                    <span class="sidebar-icon">
+                        <i class="fa fa-bar-chart" aria-hidden="true"></i>
+                    </span>
                     <span class="sidebar-text">{{ __('Jobs') }}</span>
                 </a>
             </li>
 
-            <li class="nav-item bt-1 {{ request()->routeIs('client.dashboard') ? 'active' : '' }}">
-                <a href="{{ route('client.dashboard') }}" class="nav-link">
+            <li class="nav-item bt-1 {{ request()->routeIs('clientInvoice') ? 'active' : '' }}">
+                <a href="{{ route('clientInvoice') }}" class="nav-link">
                     <span class="sidebar-icon">
                         <i class="fa fa-bar-chart" aria-hidden="true"></i>
                     </span>

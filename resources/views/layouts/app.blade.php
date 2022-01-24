@@ -49,7 +49,7 @@
 
 
             var table = $('.mydatatable').dataTable({
-                scrollY:"450px",
+                scrollY:"400px",
                 // fixedColumns:true,
                 scrollX:true,
                 // scrollCollapse: true,

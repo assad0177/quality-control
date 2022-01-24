@@ -16,7 +16,8 @@ use Illuminate\Support\Facades\Route;
 */
 
 
-Route::get('/get-plan-test', [ApiController::class, 'getPlanTest']);
+Route::post('/get-plan-test', [ApiController::class, 'getPlanTest']);
+Route::post('/set-plan-test', [ApiController::class, 'setPlanTest']);
 // Route::post('login', [RegisterController::class, 'login']);
 
 // Route::middleware('auth:api')->group( function () {

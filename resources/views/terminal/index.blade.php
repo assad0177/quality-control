@@ -37,7 +37,11 @@
                                     </table>
                                 </div>
                                 <div class="col-sm-6">
-                                    <p style="text-align: right">{{QrCode::size(200)->generate(Crypt::encryptString('c_id:'.$terminal->client_id,' t_id:'.$terminal->id));}}</p>
+                                    @php
+                                        $hash = Crypt::encryptString(json_encode(['c_id' => $terminal->client_id,'t_id' => $terminal->id]));
+                                    @endphp
+                                    {{$hash}}
+                                    <p style="text-align: right">{{QrCode::size(200)->generate($hash);}}</p>
                                 </div>
                             </div>
                         </div>

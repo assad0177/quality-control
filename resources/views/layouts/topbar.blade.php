@@ -6,14 +6,34 @@
                 <li class="nav-item dropdown ms-lg-3">
                     <a class="nav-link dropdown-toggle pt-1 px-0" href="#" role="button" data-bs-toggle="dropdown"
                         aria-expanded="false">
-                        <div class="media d-flex align-items-center">
-                            <img class="avatar rounded-circle"
-                                src="https://ui-avatars.com/api/?background=random&name={{ Auth::user()->name }}"
-                                alt="{{ Auth::user()->name }}">
-                            <div class="media-body ms-2 text-dark align-items-center d-none d-lg-block">
-                                <span class="mb-0 font-small fw-bold text-gray-900">{{ auth()->user()->name }}</span>
+                        @if(Illuminate\Support\Str::contains(Route::currentRouteName(),'client'))
+                            <div class="media d-flex align-items-center">
+                                <img class="avatar rounded-circle"
+                                    src="https://ui-avatars.com/api/?background=random&name={{ Auth::user()->first_name }}"
+                                    alt="{{ Auth::user()->first_name }}">
+                                <div class="media-body ms-2 text-dark align-items-center d-none d-lg-block">
+                                    <span class="mb-0 font-small fw-bold text-gray-900">{{ auth()->user()->first_name }}</span>
+                                </div>
                             </div>
-                        </div>
+                        @elseif(Illuminate\Support\Str::contains(Route::currentRouteName(),'terminal'))
+                            <div class="media d-flex align-items-center">
+                                <img class="avatar rounded-circle"
+                                    src="https://ui-avatars.com/api/?background=random&name={{ Auth::user()->username }}"
+                                    alt="{{ Auth::user()->username }}">
+                                <div class="media-body ms-2 text-dark align-items-center d-none d-lg-block">
+                                    <span class="mb-0 font-small fw-bold text-gray-900">{{ auth()->user()->username }}</span>
+                                </div>
+                            </div>
+                        @else
+                            <div class="media d-flex align-items-center">
+                                <img class="avatar rounded-circle"
+                                    src="https://ui-avatars.com/api/?background=random&name={{ Auth::user()->name }}"
+                                    alt="{{ Auth::user()->name }}">
+                                <div class="media-body ms-2 text-dark align-items-center d-none d-lg-block">
+                                    <span class="mb-0 font-small fw-bold text-gray-900">{{ auth()->user()->name }}</span>
+                                </div>
+                            </div>
+                            @endif
                     </a>
                     <div class="dropdown-menu dashboard-dropdown dropdown-menu-end mt-2 py-1">
                         <a class="dropdown-item d-flex align-items-center" href="{{ route('profile.show') }}">

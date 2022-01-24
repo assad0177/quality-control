@@ -97,9 +97,9 @@
             </div>
             <div class="container">
                 <!-- Trigger the modal with a button -->
-                <a ></a><button type="button" class="btn btn-lg tra-hover m-top-20" >Checkout<i class="fa fa-money" aria-hidden="true"></i></button>
+                {{-- <button type="button" class="btn btn-lg tra-hover m-top-20" data-toggle="modal" data-target="#myModal">Checkout<i class="fa fa-money" aria-hidden="true"></i></button> --}}
                 <!-- Modal -->
-                <div class="modal fade" id="myModal" role="dialog">
+                {{-- <div class="modal fade" id="myModal" role="dialog">
                     <div class="modal-dialog">
 
                     <!-- Modal content-->
@@ -112,12 +112,37 @@
                         </div>
                         <div class="modal-footer">
                             <button type="button" class="btn btn-lg tra-hover m-top-20" style="background-color: #ac2925" data-dismiss="modal">Close</button>
-                            <button type="button" class="btn btn-lg tra-hover m-top-20" href="{{route('payAndRegister')}}">Continue</button>
+                            <a class="btn btn-lg tra-hover m-top-20" href="{{route('payAndRegister')}}">Continue</a>
                         </div>
                     </div>
                     </div>
-                </div>
-
+                </div> --}}
+                <!-- Button trigger modal -->
+                <form action="{{route('payAndRegister')}}" method="post">
+                    @csrf
+                    <input type="hidden" name="requestData" value="{{json_encode($requestData)}}">
+                    <button type="button" class="btn btn-lg tra-hover " data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                        Checkout
+                    </button>
+                    <!-- Modal -->
+                    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                        <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                            <h5 class="modal-title" id="staticBackdropLabel">Acknowledgement</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                            Are You Sure You Want To Continue?
+                            </div>
+                            <div class="modal-footer">
+                            <button style="background-color: #ac2925; border:none" type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                            <button type="submit" style="padding-left:22px; padding-right:22px; padding-top:7px; padding-bottom:7px" class="btn btn-lg tra-hover ">continue</button>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+                </form>
             </div>
         </div>
     </div>

@@ -7,6 +7,7 @@ use App\Models\Client;
 use App\Models\Job;
 use App\Models\Report;
 use App\Models\Subscription;
+use App\Models\Terminal;
 use Illuminate\Http\Request;
 use PDF;
 class ClientController extends Controller
@@ -30,41 +31,46 @@ class ClientController extends Controller
         $i=1;
         $subscriptions=Subscription::where('client_id',auth()->user()->id)->get();
         $invoices=Subscription::where('client_id',auth()->user()->id)->withTrashed();
-        $client=Client::where('id',auth()->user()->id)->first();
-        return view('client.index',compact('subscriptions','i','invoices','client'));
+        return view('client.index',compact('subscriptions','i','invoices'));
     }
 
-    public function jobReport($id)
+    public function viewReport($id)
     {
+        $client=Client::where('id',auth()->user()->id)->first();
+        $job=Job::where('id',$id)->first();
+        $terminal=$job->terminal;
         $reports=Report::where('job_id',$id)->get();
-        return view('client.job-report',compact('reports'));
+        $pdf=PDF::loadView('client.view-download-report',compact('reports','client','terminal','job'));
+        return $pdf->stream();
     }
-    public function jobs()
+
+    public function viewInvoice()
+    {
+        $client=Client::where('id',auth()->user()->id)->first();
+        $pdf=PDF::loadView('client.view-download-invoice',compact('client'));
+        return $pdf->stream();
+    }
+
+    public function downloadInvoice()
+    {
+        $client=Client::where('id',auth()->user()->id)->first();
+        $job=Job::where('client_id',auth()->user()->id)->first();
+        $report=Report::where('client_id',auth()->user()->id)->first();
+        $pdf=PDF::loadView('client.view-download-invoice',compact('client'));
+        return $pdf->download('invoice.pdf');
+    }
+
+    public function clientJob()
     {
         $i=0;
         $jobs=Job::where('client_id',auth()->user()->id)->get();
         return view('client.job',compact('jobs','i'));
     }
-    public function generatePdf()
+    public function clientInvoice()
     {
-        dd("menu lab lo");
+        $client=Client::where('id',auth()->user()->id)->first();
+        return view('client.invoice',compact('client'));
     }
-    // public function makePdf()
-    // {
 
-    //     // $pdf = \PDF::loadView('pdf.certificate');
-    //     $books=Book::all();
-    //     $i=1;
-    //     $pdf = \PDF::loadView('book.bookPdf',compact('books','i'));
-    //     return $pdf->stream();
-    // }
-    // public function downloadPdf()
-    // {
-    //     $books=Book::all();
-    //     // $pdf = \PDF::loadView('pdf.certificate');
-    //     $i=1;
-    //     $pdf = \PDF::loadView('book.bookPdf',compact('books','i'));
-    //     return $pdf->download('book-detail.pdf');
-    // }
 
 }
