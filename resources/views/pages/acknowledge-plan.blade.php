@@ -1,20 +1,19 @@
 @extends('layouts.master')
 
 @section('content')
-
 <section id="hero-5" class="bg-scroll hero-section">
     <div class="banner division">
         <div class="container white-color">
             <div class="row "  >
                 <div style="margin-top:8px" class="col-sm-9 col-md-8 hero-txt">
                     <h2 class="acknowledge-text" >Acknowledge The Information And Checkout</h2>
-                    <a href="{{url()->previous()}}"  class="btn btn-lg tra-hover">Click To Edit Your Information<i class="fa fa-sign-in" aria-hidden="true"></i></a>
+                    {{-- <a href="javascript:history.back()"  class="btn btn-lg tra-hover">Click To Edit Your Information<i class="fa fa-sign-in" aria-hidden="true"></i></a> --}}
+                    <a onclick="javascript:history.back()"  class="btn btn-lg tra-hover">Click To Edit Your Information<i class="fa fa-sign-in" aria-hidden="true"></i></a>
                 </div>
             </div>
         </div>
     </div>
 </section>
-
 <section class="register_details hero-row-70">
     <div class="container">
         <div class="row w-70">
@@ -26,7 +25,8 @@
                                 <th>Personal Information</th>
                             </thead>
                             <tbody>
-                                <tr>                         <td class="left"><strong>Name</strong></td>
+                                <tr>
+                                     <td class="left"><strong>Name</strong></td>
                                     <td class="right">{{$requestData['first_name']}} {{$requestData['last_name']}}</td>
                                 </tr>
                                 <tr>
@@ -40,7 +40,6 @@
                                     <td class="right">
                                         {{$requestData['username']}}
                                     </td>
-
                                 </tr>
                             </tbody>
                         </table>
@@ -75,71 +74,40 @@
                         <table class="table table-clear">
                             <tbody>
                                 <tr>
-                                    <td class="left">
-                                        <strong>Subtotal</strong>
-                                    </td>
-                                    <td class="right">$8.497,00</td>
-                                </tr>
-
-                                <tr>
                                     <td class="left ">
                                         <strong>Grand Total</strong>
                                     </td>
                                     <td class="right ">
-                                        <strong>$7.477,36</strong>
+                                        <strong>$ {{$grandTotal}}</strong>
                                     </td>
                                 </tr>
                             </tbody>
                         </table>
-
                     </div>
                 </div>
             </div>
             <div class="container">
-                <!-- Trigger the modal with a button -->
-                {{-- <button type="button" class="btn btn-lg tra-hover m-top-20" data-toggle="modal" data-target="#myModal">Checkout<i class="fa fa-money" aria-hidden="true"></i></button> --}}
-                <!-- Modal -->
-                {{-- <div class="modal fade" id="myModal" role="dialog">
-                    <div class="modal-dialog">
-
-                    <!-- Modal content-->
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h4 class="modal-title">Acknowledge</h4>
-                        </div>
-                        <div class="modal-body">
-                            <p>Are You Sure You Want To Continue?</p>
-                        </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-lg tra-hover m-top-20" style="background-color: #ac2925" data-dismiss="modal">Close</button>
-                            <a class="btn btn-lg tra-hover m-top-20" href="{{route('payAndRegister')}}">Continue</a>
-                        </div>
-                    </div>
-                    </div>
-                </div> --}}
-                <!-- Button trigger modal -->
                 <form action="{{route('payAndRegister')}}" method="post">
                     @csrf
                     <input type="hidden" name="requestData" value="{{json_encode($requestData)}}">
                     <button type="button" class="btn btn-lg tra-hover " data-bs-toggle="modal" data-bs-target="#staticBackdrop">
                         Checkout
                     </button>
-                    <!-- Modal -->
                     <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
                         <div class="modal-dialog">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                            <h5 class="modal-title" id="staticBackdropLabel">Acknowledgement</h5>
-                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="staticBackdropLabel">Acknowledgement</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body" id="wait">
+                                    Are You Sure You Want To Continue?
+                                </div>
+                                <div class="modal-footer">
+                                    <button style="background-color: #ac2925; border:none" type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                    <button id="continue" type="submit" style="padding-left:22px; padding-right:22px; padding-top:7px; padding-bottom:7px" class="btn btn-lg tra-hover ">continue</button>
+                                </div>
                             </div>
-                            <div class="modal-body">
-                            Are You Sure You Want To Continue?
-                            </div>
-                            <div class="modal-footer">
-                            <button style="background-color: #ac2925; border:none" type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                            <button type="submit" style="padding-left:22px; padding-right:22px; padding-top:7px; padding-bottom:7px" class="btn btn-lg tra-hover ">continue</button>
-                            </div>
-                        </div>
                         </div>
                     </div>
                 </form>
@@ -147,5 +115,4 @@
         </div>
     </div>
 </section>
-
 @endsection

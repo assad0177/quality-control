@@ -10,57 +10,42 @@
 ul {
     width: 100%;
 }
-
 li {
     list-style:none;
     width: 50%;
     float: left;
     display: inline-block;
 }
-
-.main-table {
-
-}
-
 .main-table td, #main-table th {
     border-bottom: 1px solid #ddd;
     padding: 8px;
     width: auto;
 
 }
-
 #second-table  td, #second-table th {
     border: 1px solid #ddd;
     padding: 8px;
     width: auto;
 }
-
 #second-table {
     position: relative;
     top: 15%;
 }
-
 .table-responsive{
     text-align: center;
     width: 100%;
 }
-
 /* .table-responsive .table{
     width: auto;
 } */
-
 .p-0 {
     padding: 0;
 }
-
 .v-a-m {
     vertical-align: middle;
 }
-
-
 </style>
 </head>
-
 <body>
     <div class="main py-4">
         <div class="row">
@@ -74,21 +59,15 @@ li {
                                         <table class="main-table table">
                                             <tbody>
                                                 <tr>
-                                                    <td class="left">
-                                                        <strong>Client</strong>
-                                                    </td>
+                                                    <td class="left"><strong>Client</strong></td>
                                                     <td class="right"><strong>{{$client->first_name}} {{$client->last_name}}</strong></td>
                                                 </tr>
                                                 <tr>
-                                                    <td class="left">
-                                                        <strong>Email</strong>
-                                                    </td>
+                                                    <td class="left"><strong>Email</strong></td>
                                                     <td class="right">{{$client->email}}</td>
                                                 </tr>
                                                 <tr>
-                                                    <td class="left">
-                                                        <strong>Terminal</strong>
-                                                    </td>
+                                                    <td class="left"><strong>Terminal</strong></td>
                                                     <td class="right">{{$terminal->username}}</td>
                                                 </tr>
                                             </tbody>
@@ -98,16 +77,12 @@ li {
                                         <table class="main-table table">
                                             <tbody>
                                                 <tr>
-                                                    <td class="left">
-                                                        <strong>Job</strong>
-                                                    </td>
+                                                    <td class="left"><strong>Job</strong></td>
                                                     <td class="right">Job-{{$job->id}}</td>
                                                 </tr>
                                                 <tr>
-                                                    <td class="left">
-                                                        <strong>Device ID</strong>
-                                                    </td>
-                                                    <td class="right">{{$job->ud_id}}</td>
+                                                    <td class="left"><strong>Device ID</strong></td>
+                                                    <td class="right">{{$job->udid}}</td>
                                                 </tr>
                                             </tbody>
                                         </table>
@@ -128,7 +103,7 @@ li {
                                                 <tr>
                                                     <td style="text-align:center;padding-left:0;padding-right:0;">{{$i++}}</td>
                                                     <td style="text-align:center;padding-left:0;padding-right:0;">{{$report->test->name}}</td>
-                                                    <td style="text-align:center;padding-left:0;padding-right:0;">{{$report->status}}</td>
+                                                    <td style="text-align:center;padding-left:0;padding-right:0;">  @if($report->status==0)     Pending  @elseif($report->status==1) Successful @else Failed @endif</td>
                                                 </tr>
                                                 @endforeach
                                             </tbody>

@@ -11,6 +11,11 @@ class Helper{
         $chars="qwertyuiopasdfghjklzxcvbnm;,./:<>?QWERTYUIOPASDFGHJKLZXCVBNM1234567890";
         return substr(str_shuffle($chars),0,$length);
     }
+    public static function rand_number($length)
+    {
+        $chars="qwertyuiopasdfghjklzxcvbnm;,./:<>?QWERTYUIOPASDFGHJKLZXCVBNM1234567890";
+        return substr(str_shuffle($chars),0,$length);
+    }
 
 }
 

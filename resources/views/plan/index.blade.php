@@ -35,12 +35,12 @@
                                             <td style="padding-left:5px" >{{$plan->price}}</td>
                                             <td style="padding-left:10px" >{{$plan->duration==0 ? "Monthly" : "Yearly"}}</td>
                                             <td style="padding-left:15px" >
-                                                @foreach ($plan->test as $test )
-                                                <ul>
-                                                    <li>{{$test->name}}</li>
-                                                </ul>
-                                                @endforeach
-                                            </td>
+                                                <ul style=" overflow-y:scroll; height:95px">
+                                                    @foreach ($plan->test as $test )
+                                                        <li>{{$test->name}}</li>
+                                                    @endforeach
+                                            </ul>
+                                        </td>
                                             <td style="padding-left:30px">
                                                 <form action="{{route('plan.destroy',$plan->id)}}" method="post">
                                                     <a class="btn btn-success" href="{{route('plan.edit',$plan->id)}}">Edit</a>

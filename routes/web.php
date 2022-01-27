@@ -1,7 +1,5 @@
 <?php
 
-// use App\Http\Controllers\PlanController;
-// use App\Http\Controllers\TestController;
 use App\Models\Plan;
 use Illuminate\Support\Facades\Route;
 
@@ -48,6 +46,9 @@ Route::prefix('client')->group(function() {
     Route::get('/invoice', [\App\Http\Controllers\Auth\ClientController::class, 'clientInvoice'])->name('clientInvoice');
     Route::get('/job', [\App\Http\Controllers\Auth\ClientController::class, 'clientJob'])->name('clientJob');
     Route::get('/view-report/{id}', [\App\Http\Controllers\Auth\ClientController::class, 'viewReport'])->name('viewReport');
+    Route::get('/client-terminal', [\App\Http\Controllers\Auth\ClientController::class, 'clientTermina'])->name('client.termina');
+    Route::get('/add-client-termina', [\App\Http\Controllers\Auth\ClientController::class, 'AddClientTermina'])->name('client.addTermina');
+    Route::post('/save-Termina', [\App\Http\Controllers\Auth\ClientController::class, 'saveTermina'])->name('client.saveTermina');
 
 }) ;
 
@@ -56,6 +57,7 @@ Route::prefix('terminal')->group(function() {
     Route::post('/login', [\App\Http\Controllers\Auth\TerminalLoginController::class, 'login'])->name('terminal.login.submit');
     Route::get('logout/', [\App\Http\Controllers\Auth\TerminalLoginController::class, 'logout'])->name('terminal.logout');
     Route::get('/', [\App\Http\Controllers\Auth\TerminalController::class, 'index'])->name('terminal.dashboard');
+    Route::get('job-history/', [\App\Http\Controllers\Auth\TerminalController::class, 'jobHistory'])->name('terminal.jobHistory');
 }) ;
 
 Route::get('/', [App\Http\Controllers\PageNavigationController::class, 'index'])->name('welcome');

@@ -25,7 +25,7 @@
                                     @foreach ($tests as $test )
                                         <tr>
                                             <td >{{$i++}}</td>
-                                            <td ><img src="{{asset($test->icon)}}" class="avatar" alt="image"> {{$test->name}}</td>
+                                            <td ><img src="{{asset('assets/images/'.$test->icon)}}" class="avatar" alt="image"> {{$test->name}}</td>
                                             <td >{{$test->description}}</td>
                                             <td >{{$test->status==0 ? "Not-Available" : "Available" }}</td>
                                             <td >

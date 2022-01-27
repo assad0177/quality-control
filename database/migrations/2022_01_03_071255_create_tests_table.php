@@ -17,7 +17,7 @@ class CreateTestsTable extends Migration
             $table->id();
             $table->string('name');
             $table->string('description');
-            $table->boolean('status')->default(0);
+            $table->boolean('status')->default(1);
             //  status = available , 1
             //  status = no-available , 0
 

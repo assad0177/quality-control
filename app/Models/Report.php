@@ -9,4 +9,12 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 class Report extends Model
 {
     use HasFactory,SoftDeletes;
+
+    public function test()
+    {
+        return $this->belongsTo(Test::class);
+    }
+
+
+
 }

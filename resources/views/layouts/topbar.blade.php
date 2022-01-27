@@ -1,8 +1,8 @@
-<nav class="navbar navbar-top navbar-expand navbar-dashboard navbar-dark ps-0 pe-2 pb-0">
+<nav style="background-color:   #fff    " class="container-fluid navbar navbar-top navbar-expand navbar-dashboard navbar-dark ps-0 pe-2 pb-0">
     <div class="container-fluid px-0">
         <div class="d-flex justify-content-end w-100" id="navbarSupportedContent">
             <!-- Navbar links -->
-            <ul class="navbar-nav align-items-center">
+            <ul class="navbar-nav align-items-center"  >
                 <li class="nav-item dropdown ms-lg-3">
                     <a class="nav-link dropdown-toggle pt-1 px-0" href="#" role="button" data-bs-toggle="dropdown"
                         aria-expanded="false">

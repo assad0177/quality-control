@@ -7,7 +7,6 @@
     <title>Test Email View</title>
 </head>
 <body>
-
     <h3>You Have applied for {{count($details)}} Plans. To use those plans following are the usernames and passwords for the termianls</h3>
     <p><b>Note:</b> this is one time generated email. </p>
     <?php

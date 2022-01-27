@@ -3,7 +3,7 @@
             <li class="nav-item">
                 <a href="{{ route('client.dashboard') }}" class="nav-link d-flex align-items-center">
                     <span class="sidebar-icon me-2">
-                        <img src="{{ asset('assets/images/quality-control.jpeg') }}" height="30" width="35" alt="Volt Logo">
+                        <img  src="{{ asset('assets/images/apple-touch-icon-120x120.png') }}" height="20" width="25" alt="Volt Logo">
                     </span>
                     <span class="mt-1 ms-1 sidebar-text">
                         Quality Control
@@ -26,20 +26,27 @@
                     <span class="sidebar-text">{{ __('Jobs') }}</span>
                 </a>
             </li>
-
             <li class="nav-item bt-1 {{ request()->routeIs('clientInvoice') ? 'active' : '' }}">
                 <a href="{{ route('clientInvoice') }}" class="nav-link">
                     <span class="sidebar-icon">
-                        <i class="fa fa-bar-chart" aria-hidden="true"></i>
+                        <i class="fa fa-address-card-o" aria-hidden="true"></i>
                     </span>
                     <span class="sidebar-text">{{ __('Invoices') }}</span>
+                </a>
+            </li>
+            <li class="nav-item bt-1 {{ request()->routeIs('client.termina') ? 'active' : '' }}">
+                <a href="{{ route('client.termina') }}" class="nav-link">
+                    <span class="sidebar-icon">
+                        <i class="fa fa-bar-chart" aria-hidden="true"></i>
+                    </span>
+                    <span class="sidebar-text">{{ __('Terminals') }}</span>
                 </a>
             </li>
     @elseif(Illuminate\Support\Str::contains(Route::currentRouteName(),'terminal'))
             <li class="nav-item">
                 <a href="{{ route('terminal.dashboard') }}" class="nav-link d-flex align-items-center">
                     <span class="sidebar-icon me-2">
-                        <img src="{{ asset('assets/images/quality-control.jpeg') }}" height="30" width="35" alt="Volt Logo">
+                        <img src="{{ asset('assets/images/apple-touch-icon-120x120.png') }}" height="20" width="25" alt="Volt Logo">
                     </span>
                     <span class="mt-1 ms-1 sidebar-text">
                         Quality Control
@@ -56,8 +63,8 @@
                 </a>
             </li>
 
-            <li class="nav-item bt-1 {{ request()->routeIs('terminal.dashboard') ? 'active' : '' }}">
-                <a href="{{ route('terminal.dashboard') }}" class="nav-link">
+            <li class="nav-item bt-1 {{ request()->routeIs('terminal.jobHistory') ? 'active' : '' }}">
+                <a href="{{ route('terminal.jobHistory') }}" class="nav-link">
                     <span class="sidebar-icon">
                         <i class="fa fa-bar-chart" aria-hidden="true"></i>
                     </span>
@@ -69,7 +76,7 @@
             <li class="nav-item">
                 <a href="{{ route('home') }}" class="nav-link d-flex align-items-center">
                     <span class="sidebar-icon me-2">
-                        <img src="{{ asset('assets/images/quality-control.jpeg') }}" height="30" width="35" alt="Volt Logo">
+                        <img src="{{ asset('assets/images/apple-touch-icon-120x120.png') }}" height="20" width="25" alt="Volt Logo">
                     </span>
                     <span class="mt-1 ms-1 sidebar-text">
                         Quality Control

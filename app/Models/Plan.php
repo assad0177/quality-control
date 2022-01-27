@@ -29,7 +29,8 @@ class Plan extends Model
     }
     public function getAvailableTests()
     {
-        dd(Plan::with('test')->pluck('id','name')->where('status',0));
+        // dd(Plan::with('test')->where('status',0)->toArray());
+
         // dd($this->test->select('id','description')->where('status','1')->toArray());
     }
 }

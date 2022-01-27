@@ -18,13 +18,15 @@ class Test extends Model
         'image'
     ];
 
-
     public function test()
     {
         return $this->belongsToMany(Test::class, 'test_plans', 'test_id' , 'plan_id'  );
     }
 
-
+    public function report()
+    {
+        return $this->hasMany(Report::class);
+    }
 
 
 

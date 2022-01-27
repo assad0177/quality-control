@@ -17,8 +17,8 @@ class TestFactory extends Factory
             'name'=>$this->faker->name(),
             'description'=>$this->faker->sentence(),
             'status'=>$this->faker->boolean(),
-            'icon'=>$this->faker->image("assets/images",640,480,null,false),
-            'image'=>$this->faker->image("assets/images",640,480,null,false),
+            'icon'=>$this->faker->image("public/assets/images",640,480,null,false),
+            'image'=>$this->faker->image("public/assets/images",640,480,null,false),
         ];
     }
 }

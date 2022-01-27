@@ -1,6 +1,94 @@
 @extends('layouts.app')
 
 @section('content')
+
+<div class="conatiner-fluid mt-3">
+    <div class="row">
+        <div class=" col-3">
+            <div style="border-radius:9px;padding: 10px;box-sizing: border-box; display: block;color: #fff!important;" class="small-box bg-info">
+                <div  class="inner">
+                    <h3 style="color: #fff">$</h3>
+                    <p style="color: #fff" >Amount Spent In Total</p>
+                </div>
+                <div  class="icon">
+                    <i class="ion ion-bag"></i>
+                </div>
+                <div style="background-color: rgba(0,0,0,.1);border-radius:5px;text-align:center">
+                    <a href="#" style="color:white; " class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class=" col-3">
+            <div style="border-radius:9px;padding: 10px;box-sizing: border-box; display: block;color: #fff!important;" class="small-box bg-success  ">
+                <div  class="inner">
+                    <h3 style="color: #fff">$</h3>
+                    <p style="color: #fff" >Amount Spent In Total</p>
+                </div>
+                <div  class="icon">
+                    <i class="ion ion-bag"></i>
+                </div>
+                <div style="background-color: rgba(0,0,0,.1);border-radius:5px;text-align:center">
+                    <a href="#" style="color:white; " class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+                </div>
+            </div>
+        </div>
+
+
+        <div class=" col-3">
+            <div style="border-radius:9px;padding: 10px;box-sizing: border-box; display: block;color: #fff!important;" class="small-box bg-warning">
+                <div  class="inner">
+                    <h3 style="color: #fff">$</h3>
+                    <p style="color: #fff" >Amount Spent In Total</p>
+                </div>
+                <div  class="icon">
+                    <i class="ion ion-bag"></i>
+                </div>
+                <div style="background-color: rgba(0,0,0,.1);border-radius:5px;text-align:center">
+                    <a href="#" style="color:white; " class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class=" col-3">
+            <div style="border-radius:9px;padding: 10px;box-sizing: border-box; display: block;color: #fff!important;" class="small-box bg-danger">
+                <div  class="inner">
+                    <h3 style="color: #fff">$</h3>
+                    <p style="color: #fff" >Amount Spent In Total</p>
+                </div>
+                <div  class="icon">
+                    <i class="ion ion-bag"></i>
+                </div>
+                <div style="background-color: rgba(0,0,0,.1);border-radius:5px;text-align:center">
+                    <a href="#" style="color:white; " class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div class="row">
+        <div class="col-4">
+            <div class="bg-white rounded shadow p-5 mb-4 mt-4">
+                <table class="table table-clear ">
+                    <thead >
+                        <h3 >Personal Information</h3>
+                    </thead>
+                    <tbody>
+                        <tr style="border-top:2px solid black">
+                            <td class="left">
+                                <strong>Name</strong>
+                            </td>
+                            <td class="right"></td>
+                        </tr>
+                        <tr>
+                            <td class="left">
+                                <strong>Email</strong>
+                            </td>
+                            <td class="right"></td>
+                        </tr>
+
+                    </tbody>
+                </table>
+    </div>
+</div>
     <div class="main py-4">
         <div class="row">
             <div class="col-12 col-xl-12">
