@@ -69,7 +69,7 @@
                     .done(function(data){
                         let elem = $(that).parent().parent().siblings('.plan_price');
                         $(elem).empty();
-                        $(elem).append('<input type="number" name="price[]" placeholder="Unit Price"  class="form-control" step="0.00" min="0" readonly value="'+data.price+'"/>');
+                        $(elem).append('<input type="number" name="price[]" placeholder="Unit Price" class="form-control" step="0.00" min="0" readonly value="'+data.price+'"/>');
                     });
                 });
             });

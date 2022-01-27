@@ -95,10 +95,10 @@
                                                     @endforeach
                                                 </select>
                                             </div>
-                                        </td>
-                                        <td class="plan_price">
-                                            <input readonly type="number" value="{{$plann->price}}" name='price[]' placeholder='Unit Price' class="price form-control"/>
-                                        </td>
+                                        </td>   
+                                            <td class="plan_price">
+                                                <input readonly type="number" value="{{$plann->price}}" name='price[]' placeholder='Unit Price' class="price form-control"/>
+                                            </td>
                                     </tr>
                                     <tr id='addr1'></tr>
                                 </tbody>

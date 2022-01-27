@@ -17,7 +17,7 @@
                         </div>
                 </div>
                 <div style="background-color: rgba(0,0,0,.1);border-radius:5px;text-align:center">
-                    <a href="#" style="color:white; " class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+                    <a href="{{route('client.termina')}}" style="color:white; " class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
                 </div>
 
             </div>
@@ -29,7 +29,8 @@
                     <p style="color: #fff" >Subscriptions</p>
                 </div>
                 <div  class="icon">
-                    <i  style="position:absolute;right:20% ;top:20%; color: rgba(0,0,0,.15); font-size:90px" class="fas fa-bar-chart"></i>
+                    <i  style="position:absolute;right:20% ;top:20%; color: rgba(0,0,0,.15); font-size:90px" class="fa fa-bell"></i>
+                    {{-- <i  style="position:absolute;right:20% ;top:20%; color: rgba(0,0,0,.15); font-size:90px" class="fas fa-bar-chart"></i> --}}
                 </div>
 
                 <div style="background-color: rgba(0,0,0,.1);border-radius:5px;text-align:center">
@@ -44,11 +45,11 @@
                     <p style="color: #fff" >Spent Amount</p>
                 </div>
                 <div  class="icon">
-                    <i  style="position:absolute;right:20% ;top:20%; color: rgba(0,0,0,.15); font-size:90px" class="fas fa-bar-chart"></i>
+                    <i  style="position:absolute;right:20% ;top:20%; color: rgba(0,0,0,.15); font-size:90px" class="fa fa-usd"></i>
                 </div>
 
                 <div style="background-color: rgba(0,0,0,.1);border-radius:5px;text-align:center">
-                    <a href="#" style="color:white; " class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+                    <a href="#" style="color:white; " class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
                 </div>
             </div>
         </div>
@@ -59,7 +60,7 @@
                     <p style="color: #fff" >Spent Amount</p>
                 </div>
                 <div  class="icon">
-                    <i  style="position:absolute;right:20% ;top:20%; color: rgba(0,0,0,.15); font-size:90px" class="fas fa-bar-chart"></i>
+                    <i  style="position:absolute;right:20% ;top:20%; color: rgba(0,0,0,.15); font-size:90px" class="fa fa-usd"></i>
                 </div>
 
                 <div style="background-color: rgba(0,0,0,.1);border-radius:5px;text-align:center">

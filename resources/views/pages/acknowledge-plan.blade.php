@@ -8,7 +8,7 @@
                 <div style="margin-top:8px" class="col-sm-9 col-md-8 hero-txt">
                     <h2 class="acknowledge-text" >Acknowledge The Information And Checkout</h2>
                     {{-- <a href="javascript:history.back()"  class="btn btn-lg tra-hover">Click To Edit Your Information<i class="fa fa-sign-in" aria-hidden="true"></i></a> --}}
-                    <a onclick="javascript:history.back()"  class="btn btn-lg tra-hover">Click To Edit Your Information<i class="fa fa-sign-in" aria-hidden="true"></i></a>
+                    <a onclick="window.history.back()"  class="btn btn-lg tra-hover">Click To Edit Your Information<i class="fa fa-sign-in" aria-hidden="true"></i></a>
                 </div>
             </div>
         </div>
